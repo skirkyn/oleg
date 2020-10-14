@@ -12,7 +12,7 @@ import (
 
 func main() {
 	reader := NewReader()
-	pb := NewPonyByer()
+	pb := NewPonyBuyer()
 	input := reader.Read()
 	if input.numOfFigures == 0{
 		fmt.Println(input.actual)
@@ -33,7 +33,7 @@ func toString(arr []int) string {
 type PonyBuyer struct {
 }
 
-func NewPonyByer() *PonyBuyer {
+func NewPonyBuyer() *PonyBuyer {
 	return &PonyBuyer{}
 }
 
