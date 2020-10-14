@@ -29,14 +29,14 @@ func toString(arr []int) string {
 	return sb.String()
 }
 
-type PonyByer struct {
+type PonyBuyer struct {
 }
 
-func NewPonyByer() *PonyByer {
-	return &PonyByer{}
+func NewPonyByer() *PonyBuyer {
+	return &PonyBuyer{}
 }
 
-func (pb PonyByer) Buy(desires map[string][]int, actual []int, numOfToys int) ([]int, int) {
+func (pb PonyBuyer) Buy(desires map[string][]int, actual []int, numOfToys int) ([]int, int) {
 	min := math.MaxInt32
 	result := make([]int, 0)
 	for k, v := range desires {
@@ -58,7 +58,7 @@ func (pb PonyByer) Buy(desires map[string][]int, actual []int, numOfToys int) ([
 	}
 }
 
-func (pb PonyByer) newActual(actual, desired []int, pattern string, oldCounter int) ([]int, int) {
+func (pb PonyBuyer) newActual(actual, desired []int, pattern string, oldCounter int) ([]int, int) {
 
 	for _, r := range pattern {
 		num, err := strconv.Atoi(string(r))

@@ -5,7 +5,6 @@ import (
 	"log"
 	"os"
 	"strconv"
-	"strings"
 	"testing"
 )
 
@@ -35,13 +34,6 @@ func (rdr Reader) ReadFile(fileName string) Input {
 
 }
 
-func toString(arr []int) string {
-	var sb strings.Builder
-	for _, item := range arr {
-		sb.WriteString(strconv.Itoa(item))
-	}
-	return sb.String()
-}
 
 func TestFileRead(t *testing.T) {
 	reader := NewReader()
