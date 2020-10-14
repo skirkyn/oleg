@@ -15,6 +15,7 @@ func main() {
 	pb := NewPonyByer()
 	input := reader.Read()
 	if input.numOfFigures == 0{
+		fmt.Println(input.actual)
 		os.Exit(0)
 	}
 	res, _ := pb.Buy(input.desires, input.actual, input.actualToysCount)
