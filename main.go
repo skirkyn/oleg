@@ -69,8 +69,7 @@ func (pb PonyBuyer) newActual(actual, desired []int, pattern string, oldCounter 
 			}
 		}
 	}
-	newOne := make([]int, 0)
-	newOne = append(newOne, actual...)
+	newOne := make([]int, len(actual))
 	counter := oldCounter
 	for _, num := range desired {
 		newOne[num] = 1

@@ -38,7 +38,7 @@ func (rdr Reader) ReadFile(fileName string) Input {
 func TestFileRead(t *testing.T) {
 	reader := NewReader()
 	pb := NewPonyBuyer()
-	for i := 0; i < 6; i++ {
+	for i := 6; i < 7; i++ {
 		input := reader.ReadFile("tests/test_input_" + strconv.Itoa(i) + ".txt")
 		res, _ := pb.Buy(input.desires, input.actual, input.actualToysCount)
 		stringResult := toString(res)
